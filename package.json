@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-tailwindjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "camelcase-css": "^2.0.1",
+    "deasync-promise": "^1.0.1",
+    "lodash": "^4.17.15",
+    "postcss": "^7.0.17",
+    "postcss-selector-parser": "^6.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-tester": "^6.4.0",
+    "js-yaml": "^3.13.1",
+    "mocha": "^6.2.0",
+    "tailwindcss": "^1.1.2"
+  }
+}

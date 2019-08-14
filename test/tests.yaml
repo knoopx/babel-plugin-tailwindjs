@@ -1,0 +1,44 @@
+- title: no transform
+  code: |
+    const result = tw("text-red-500 bg-blue-200 lg:w-1/2");
+- title: whitespaces
+  code: |
+    const result = twjs(" text-red-500    bg-blue-200 lg:w-1/2        ")
+  output: |
+    const result = {
+      "color": "#f56565",
+      "backgroundColor": "#bee3f8",
+      "@media (min-width: 1024px)": {
+        "width": "50%"
+      }
+    };
+- title: arrays
+  code: |
+    const result = twjs(["text-red-500", "bg-blue-200", "lg:w-1/2"])
+  output: |
+    const result = {
+      "color": "#f56565",
+      "backgroundColor": "#bee3f8",
+      "@media (min-width: 1024px)": {
+        "width": "50%"
+      }
+    };
+- title: name option
+  pluginOptions:
+    name: custom
+  code: |
+    const result = custom("text-red-500")
+  output: |
+    const result = {
+      "color": "#f56565"
+    };
+- title: config option
+  pluginOptions:
+    config: custom-config.js
+    xxx: true
+  code: |
+    const result = twjs("text-custom")
+  output: |
+    const result = {
+      "color": "red"
+    };
