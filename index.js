@@ -69,7 +69,9 @@ module.exports = function({ types: t, ...x }) {
     name: "tailwindjs",
     visitor: {
       Program(path, state) {
-        tailwindClassNames = deasync(parseTailwindClassNames(state.opts.config))
+        if (!tailwindClassNames) {
+          tailwindClassNames = deasync(parseTailwindClassNames(state.opts.config))
+        }
       },
       CallExpression(path, { opts }) {
         const { node } = path
